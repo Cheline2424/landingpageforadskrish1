@@ -1,9 +1,13 @@
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    /* Mengubah font utama menjadi Montserrat yang elegan */
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
 }
@@ -43,56 +47,89 @@ body, html {
 
 .top-text {
     max-width: 80%;
-    font-size: 1.2em;
+    /* Mengubah font teks atas menjadi lebih tebal dan mewah */
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5em; /* Memperbesar ukuran font */
     margin-bottom: 20px;
 }
 
 .highlight {
-    color: yellow;
+    color: #ffd700; /* Mengubah warna highlight menjadi emas */
     font-weight: bold;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid gold;
-    object-fit: cover;
+    width: 200px; /* Memperbesar ukuran logo */
+    height: 200px;
+    /* Mengubah logo menjadi persegi dan menghapus border-radius */
+    border-radius: 0;
+    border: none; /* Menghapus border */
+    object-fit: contain; /* Mengubah object-fit agar gambar pas dalam wadah */
     margin-bottom: 30px;
 }
 
 .join-btn {
-    background-color: #ff0000;
-    color: white;
-    padding: 15px 30px;
+    /* Mengubah tombol menjadi emas menyala */
+    background: linear-gradient(145deg, #ffd700, #ffc400); /* Gradasi warna emas */
+    color: #4b371c;
+    padding: 18px 36px; /* Memperbesar padding tombol */
     text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.8em; /* Memperbesar ukuran font tombol */
+    font-weight: 900; /* Membuat font lebih tebal */
     border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s;
+    /* Efek koin emas: shadow dan sedikit glow */
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 30px;
 }
 
 .join-btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.8), inset 0 2px 5px rgba(255, 255, 255, 0.7);
 }
 
 .mid-text {
-    font-size: 1.2em;
+    /* Mengubah font teks tengah */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
     line-height: 1.5;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .countdown {
-    background-color: #2e2e2e;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    border-radius: 15px;
+    /* Memberikan sedikit efek glow */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #timer {
-    font-size: 3em;
+    font-size: 4em; /* Memperbesar timer */
     font-weight: bold;
-    color: red;
+    color: #ff0000;
+    text-shadow: 0 0 10px red;
+}
+
+.countdown p {
+    /* Mengubah tampilan "HURRY UP" */
+    font-size: 1.5em;
+    font-weight: 900;
+    color: yellow; /* Mengubah warna agar lebih menarik */
+    text-shadow: 0 0 5px yellow, 0 0 10px orange;
+    margin: 5px 0 0 0;
+    animation: pulse 1.5s infinite;
+}
+
+/* Efek animasi untuk "HURRY UP" */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
