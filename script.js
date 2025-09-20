@@ -10,3 +10,9 @@ function updateTimer() {
 }
 
 setInterval(updateTimer, 1000);
+
+const joinButton = document.getElementById('joinButton');
+
+joinButton.addEventListener('click', function() {
+    fbq('track', 'Lead');
+});
