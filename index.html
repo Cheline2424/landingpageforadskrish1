@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHT CLUB Official</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BHT CLUB Official</title>
+  <link rel="stylesheet" href="style.css">
 
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1500103954756640');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1500103954756640&ev=PageView&noscript=1"
-    /></noscript>
-    </head>
-<body>
-
-    <video autoplay muted loop id="background-video">
-        <source src="tiger-video.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
-
-    <div class="content">
-        <p class="top-text">
-            India's Most Popular Color Trading Tipper, Join Our Official Telegram Channel and Earn Unlimited Money with 
-            <span class="highlight">BHT CLUB</span>
-        </p>
-        
-        <img src="logo-utama.jpg" alt="BHT CLUB Logo" class="logo">
-
-        <a href="https://t.me/+vcXxZfaxuY1lNjQ1" id="joinButton" target="_blank" class="join-btn">JOIN OUR TELEGRAM</a>
-
-        <p class="mid-text">
-            RECOVER ALL YOUR LOSSES NOW EARN 3-10K DAILY<br>
-            Recover Your Losses By Real Hack $$$$
-        </p>
-
-        <div class="countdown">
-            <span id="timer">60</span>
-            <p>!! HURRY UP !!</p>
-        </div>
-    </div>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){
+        n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
     
-    <script>
-        // Kode untuk Countdown Timer
-        let countdown = 60;
-        const timerElement = document.getElementById('timer');
+    fbq('init', '1500103954756640'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1500103954756640&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="tiger-video.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
 
-        function updateTimer() {
-            countdown--;
-            timerElement.textContent = countdown;
-            if (countdown <= 0) {
-                countdown = 60; 
-            }
-        }
+  <div class="content">
+    <p class="top-text">
+      India's Most Popular Color Trading Tipper, Join Our Official Telegram Channel and Earn Unlimited Money with 
+      <span class="highlight">BHT CLUB</span>
+    </p>
 
-        setInterval(updateTimer, 1000);
+    <img src="logo-utama.jpg" alt="BHT CLUB Logo" class="logo">
 
-        // Kode untuk melacak event Lead dengan Meta Pixel
-        const joinButton = document.getElementById('joinButton');
+    <a href="https://t.me/+vcXxZfaxuY1lNjQ1" 
+       id="joinButton" target="_blank" class="join-btn">JOIN OUR TELEGRAM</a>
 
-        joinButton.addEventListener('click', function() {
-            fbq('track', 'Lead');
-        });
-    </script>
+    <p class="mid-text">
+      RECOVER ALL YOUR LOSSES NOW EARN 3-10K DAILY<br>
+      Recover Your Losses By Real Hack $$$$
+    </p>
+
+    <div class="countdown">
+      <span id="timer">60</span>
+      <p>!! HURRY UP !!</p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer
+    let countdown = 60;
+    const timerElement = document.getElementById('timer');
+    function updateTimer() {
+      countdown--;
+      timerElement.textContent = countdown;
+      if (countdown <= 0) {
+        countdown = 60;
+      }
+    }
+    setInterval(updateTimer, 1000);
+
+    // Event Lead dengan parameter spesifik
+    const joinButton = document.getElementById('joinButton');
+    joinButton.addEventListener('click', function() {
+      fbq('track', 'Lead', {
+        content_name: 'Telegram Join BHT CLUB',
+        content_category: 'Gambling',
+        value: 10.00,
+        currency: 'USD',
+        event_source: 'Landing Page',
+        funnel_stage: 'Acquisition'
+      });
+    });
+  </script>
 </body>
 </html>
